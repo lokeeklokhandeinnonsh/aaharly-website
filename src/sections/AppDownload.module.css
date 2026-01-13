@@ -1,0 +1,97 @@
+.section {
+  background-color: #4A4A4A;
+  color: var(--white);
+  padding: 100px 20px 0; /* Remove bottom padding */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end; /* Align content to bottom */
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Keep text centered vertically relative to phone */
+  justify-content: center;
+  gap: 120px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-end; /* Align items to bottom of container */
+}
+
+.imageWrapper {
+  flex: 0 0 auto; /* Don't grow/shrink unpredictably */
+  display: flex;
+  justify-content: center;
+}
+
+.phoneImage {
+  width: 350px; /* Larger phone */
+  max-width: 100%;
+  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.6));
+  transform: none;
+  display: block; /* Ensure no unwanted inline gaps */
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+  max-width: 500px;
+  padding-bottom: 120px; /* Push text up to be vertically centered relative to the phone */
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  color: var(--white);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #CCCCCC;
+  max-width: 250px; /* Narrow width to force wrapping as seen in image */
+  margin: 0;
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.badge {
+  height: 70px; /* Slightly smaller for elegance */
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.badge:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .content {
+    order: -1;
+    text-align: center;
+  }
+  
+  .badges {
+    justify-content: center;
+  }
+}
