@@ -22,14 +22,14 @@
 }
 
 .secondary {
-  border: 2px solid var(--text-dark);
-  color: var(--text-dark);
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  background-color: transparent;
 }
 
 .secondary:hover {
-  background-color: var(--text-dark);
-  color: var(--white);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 122, 47, 0.2);
 }
 
 .button:active {
