@@ -7,7 +7,7 @@
   border: 3px solid var(--primary-orange);
   border-radius: var(--radius-lg);
   padding: 60px 40px;
-  max-width: 1200px;
+  max-width: 1200px;  
   margin: 0 auto;
 }
 
@@ -22,18 +22,25 @@
 .grid {
   background: var(--white);
   border-radius: var(--radius-md);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for the white card */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 40px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: 934px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  gap: 55px;
 }
 
 .card {
-  padding: 0 20px;
+  width: 238px;
+  min-height: 134px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 20px;
   position: relative;
 }
 
@@ -41,7 +48,7 @@
 .card:not(:last-child)::after {
   content: '';
   position: absolute;
-  right: 0;
+  right: -27px;
   top: 10%;
   height: 80%;
   width: 1px;
@@ -51,8 +58,7 @@
 .cardHeader {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: 12px;
   text-align: left;
 }
 
@@ -62,6 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .icon {
@@ -71,10 +78,12 @@
 }
 
 .cardTitle {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: rgba(85, 85, 85, 1);
   margin: 0;
   text-align: left;
 }
@@ -88,7 +97,17 @@
 
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 300px;
+  }
+  
+  .card {
+    width: 100%;
+  }
+  
+  .card:not(:last-child)::after {
+    display: none;
   }
 }

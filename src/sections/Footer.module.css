@@ -30,10 +30,11 @@
   font-weight: 500;
 }
 
-.contactColumn, .socialColumn {
+.contactColumn, .socialColumn, .legalColumn {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Left align text */
+  align-items: flex-start;
+  text-align: left; /* Left align text */
   gap: 12px;
 }
 
@@ -41,6 +42,10 @@
 .contactColumn {
   align-items: center;
   text-align: center;
+}
+
+.legalColumn {
+    align-items: flex-start;
 }
 
 .socialColumn {
@@ -101,7 +106,7 @@
     align-items: center;
   }
   
-  .contactColumn, .socialColumn {
+  .contactColumn, .socialColumn, .legalColumn {
     align-items: center;
   }
 }

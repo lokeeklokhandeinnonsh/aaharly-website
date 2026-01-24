@@ -1,22 +1,18 @@
 import React from 'react';
-import Hero from './sections/Hero';
-import WhatWeDo from './sections/WhatWeDo';
-import Audience from './sections/Audience';
-import ValueProp from './sections/ValueProp';
-import AppDownload from './sections/AppDownload';
-import Footer from './sections/Footer';
-import './App.css'; // Leaving this in case we want global app styles later, but usually empty if modules used.
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div className="app-container">
-      <Hero />
-      <WhatWeDo />
-      <Audience />
-      <ValueProp />
-      <AppDownload />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </Router>
   );
 };
 

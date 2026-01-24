@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
@@ -19,6 +20,17 @@ const Footer: React.FC = () => {
                     <a href="mailto:contact@aaharly.com" className={styles.link}>
                         contact@aaharly.com
                     </a>
+                </div>
+
+                <div className={styles.legalColumn}>
+                    <div className={styles.columnTitle}>Legal</div>
+                    <Link to="/privacy-policy" className={styles.link}>
+                        Privacy Policy
+                    </Link>
+                    <Link to="/terms-and-conditions" className={styles.link}>
+                      
+                    </Link>
+                    
                 </div>
 
                 <div className={styles.socialColumn}>
