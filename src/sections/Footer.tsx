@@ -15,22 +15,17 @@ const Footer: React.FC = () => {
                     Built in India 🇮🇳
                 </div>
 
-                <div className={styles.contactColumn}>
-                    <div className={styles.columnTitle}>Contact Us</div>
-                    <a href="mailto:contact@aaharly.com" className={styles.link}>
-                        contact@aaharly.com
-                    </a>
-                </div>
-
                 <div className={styles.legalColumn}>
-                    <div className={styles.columnTitle}>Legal</div>
+                    <div className={styles.columnTitle}>Company</div>
+                    <Link to="/contact" className={styles.link}>
+                        Contact Us
+                    </Link>
+                    <Link to="/terms-and-conditions" className={styles.link}>
+                        Terms & Conditions
+                    </Link>
                     <Link to="/privacy-policy" className={styles.link}>
                         Privacy Policy
                     </Link>
-                    <Link to="/terms-and-conditions" className={styles.link}>
-                      
-                    </Link>
-                    
                 </div>
 
                 <div className={styles.socialColumn}>

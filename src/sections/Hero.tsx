@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './Hero.module.css';
 import Button from '../components/Button';
 
+import { useNavigate } from 'react-router-dom';
+
 const Hero: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <section className={styles.hero}>
             <div className={styles.contentWrapper}>
@@ -21,7 +24,7 @@ const Hero: React.FC = () => {
                     <Button onClick={() => document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' })}>
                         Get the App
                     </Button>
-                    <Button variant="secondary" onClick={() => window.location.href = 'mailto:contact@aaharly.com'}>
+                    <Button variant="secondary" onClick={() => navigate('/contact')}>
                         Contact Us
                     </Button>
                 </div>
