@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import type { FormEvent } from 'react';
 import styles from './ContactForm.module.css';
+import { apiFetch } from '../lib/api';
 
 interface FormData {
     name: string;
@@ -94,17 +95,9 @@ const ContactForm: React.FC = () => {
         setIsSubmitting(true);
 
         try {
-            // Using a relative path which will be proxied or need configuring in Vite
-            // Assuming the API is on the same domain or proxy setup
-            // For development, might need full URL if ports differ.
-            // Using /api/v1/contact as requested endpoint path convention
 
-            // You may need to create a proxy in vite.config.ts if backend runs on different port (Likely 4000 based on tsoa.json)
-            const response = await fetch('/api/v1/contact', {
+            await apiFetch('/api/v1/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
@@ -113,10 +106,6 @@ const ContactForm: React.FC = () => {
                     message: formData.message
                 }),
             });
-
-            if (!response.ok) {
-                throw new Error('Failed to send message');
-            }
 
             // Success
             showToast('success', 'Your message has been sent. Team Aaharly will contact you shortly.');
@@ -131,7 +120,7 @@ const ContactForm: React.FC = () => {
 
         } catch (error) {
             console.error('Submission error:', error);
-            showToast('error', 'Failed to send message. Please try again.');
+            showToast('error', 'Server unavailable. Please try again later.');
         } finally {
             setIsSubmitting(false);
         }
