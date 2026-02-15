@@ -5,6 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    // Proxy removed in favor of direct API calls using VITE_API_BASE_URL
   }
 })
