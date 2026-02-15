@@ -58,7 +58,12 @@ app.post("/api/v1/contact", async (req, res) => {
   }
 });
 
-// Force server to accept external connections
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Export the Express API for Vercel
+export default app;
+
+// Only listen when running locally (not in Vercel environment)
+if (!process.env.VERCEL) {
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
