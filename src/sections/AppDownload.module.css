@@ -4,18 +4,19 @@
   padding: 100px 20px 0; /* Remove bottom padding */
   overflow: hidden;
   display: flex;
-  align-items: flex-end; /* Align content to bottom */
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .container {
   display: flex;
-  align-items: center; /* Keep text centered vertically relative to phone */
+  align-items: flex-end; /* Align items to bottom of container */
   justify-content: center;
   gap: 120px;
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
-  align-items: flex-end; /* Align items to bottom of container */
 }
 
 .imageWrapper {
@@ -33,7 +34,7 @@
 }
 
 .content {
-  flex: 1;
+  flex: 0 1 auto;
   text-align: left;
   max-width: 500px;
   padding-bottom: 120px; /* Push text up to be vertically centered relative to the phone */
@@ -43,8 +44,9 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 1.1;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   color: var(--white);
+  text-align: center;
 }
 
 .bottomRow {
@@ -58,7 +60,7 @@
   font-size: 18px;
   line-height: 1.5;
   color: #CCCCCC;
-  max-width: 250px; /* Narrow width to force wrapping as seen in image */
+  max-width: 280px;
   margin: 0;
 }
 
@@ -70,7 +72,7 @@
 }
 
 .badge {
-  height: 70px; /* Slightly smaller for elegance */
+  height: 56px; /* In-between the previous 70px and current 48px */
   cursor: pointer;
   transition: opacity 0.2s;
 }

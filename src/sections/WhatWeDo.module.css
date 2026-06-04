@@ -4,7 +4,8 @@
 
 .title {
   text-align: center;
-  font-size: 36px;
+  font-size: 48px;
+  font-weight: 700;
   margin-bottom: 60px;
   color: var(--text-dark);
 }
@@ -13,56 +14,51 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 1044px;
+  max-width: 946px; /* 302px * 3 + 20px * 2 */
   margin: 0 auto;
-  gap: 69px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card {
   background: var(--white);
   width: 302px;
-  min-height: 166px;
+  height: 166px;
   padding: 16px 32px;
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #E5E5E5;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 20px;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-md);
+  box-sizing: border-box;
 }
 
 .cardTitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 100%;
-  letter-spacing: -0.01em;
-  color: rgba(85, 85, 85, 1);
+  line-height: 1.3;
+  color: var(--text-dark);
+  margin: 0;
 }
 
 .cardText {
-  color: var(--text-gray);
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
   line-height: 1.6;
+  margin: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .grid {
     flex-direction: column;
     align-items: center;
-  }
-  
-  .card {
-    width: 100%;
-    max-width: 302px;
+    gap: 20px;
   }
 }
+
