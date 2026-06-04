@@ -5,16 +5,19 @@ const Audience: React.FC = () => {
     const audiences = [
         {
             icon: "/images/run.svg",
+            titleText: "Fitness Enthusiasts",
             title: <>Fitness<br />Enthusiasts</>,
             description: <>Fuel workouts with<br />structured nutrition.</>
         },
         {
             icon: "/images/working.svg",
+            titleText: "Working Professionals",
             title: <>Working<br />Professionals</>,
             description: <>Meals designed around<br />your fitness goals.</>
         },
         {
             icon: "/images/college.svg",
+            titleText: "College Students",
             title: <>College<br />Students</>,
             description: <>Affordable, disciplined meals<br />beyond mess food.</>
         }
@@ -29,7 +32,7 @@ const Audience: React.FC = () => {
                         <div key={index} className={styles.card}>
                             <div className={styles.cardHeader}>
                                 <div className={styles.iconWrapper}>
-                                    <img src={item.icon} alt={item.title} className={styles.icon} />
+                                    <img src={item.icon} alt={item.titleText} className={styles.icon} />
                                 </div>
                                 <h3 className={styles.cardTitle}>{item.title}</h3>
                             </div>
