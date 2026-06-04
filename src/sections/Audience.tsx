@@ -5,18 +5,18 @@ const Audience: React.FC = () => {
     const audiences = [
         {
             icon: "/images/run.svg",
-            title: "Fitness Enthusiasts",
-            description: "Fuel workouts with structured nutrition."
+            title: <>Fitness<br />Enthusiasts</>,
+            description: <>Fuel workouts with<br />structured nutrition.</>
         },
         {
             icon: "/images/working.svg",
-            title: "Working Professionals",
-            description: "Meals designed around your fitness goals."
+            title: <>Working<br />Professionals</>,
+            description: <>Meals designed around<br />your fitness goals.</>
         },
         {
             icon: "/images/college.svg",
-            title: "College Students",
-            description: "Affordable, disciplined meals beyond mess food."
+            title: <>College<br />Students</>,
+            description: <>Affordable, disciplined meals<br />beyond mess food.</>
         }
     ];
 

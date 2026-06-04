@@ -4,16 +4,16 @@ import styles from './WhatWeDo.module.css';
 const WhatWeDo: React.FC = () => {
     const features = [
         {
-            title: "Personalized Nutrition",
-            description: "Meals designed around your fitness goals and body needs."
+            title: <>Personalized<br />Nutrition</>,
+            description: <>Meals designed around your<br />fitness goals and body needs.</>
         },
         {
-            title: "Meal Plans, Not Orders",
-            description: "Weekly and monthly plans built for consistency."
+            title: <>Meal Plans,<br />Not Orders</>,
+            description: <>Weekly and monthly plans<br />built for consistency.</>
         },
         {
-            title: "Built for Fitness & Wellness",
-            description: "Designed for gym goers, professionals, and students."
+            title: <>Built for Fitness<br />& Wellness</>,
+            description: <>Designed for gym goers,<br />professionals, and students.</>
         }
     ];
 
